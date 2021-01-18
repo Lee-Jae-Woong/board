@@ -1,0 +1,25 @@
+
+[게시판 테이블] 
+
+create table board(
+bno number not null,
+title varchar2(200) not null,
+content varchar2(4000),
+write varchar2(50) not null,
+regdate date default sysdate,
+viewcount number default 0,
+primary key(bno)
+);
+
+[유저 테이블]
+
+create table boarduser(
+ userno number primary key,
+ username varchar2(20),
+ userid varchar2(20),
+ userpass varchar2(20),
+ usergender varchar2(2),
+ userphone varchar2(11),
+ userbirth date,
+ usermail varchar2(50),
+ useraddress varchar2(300));
